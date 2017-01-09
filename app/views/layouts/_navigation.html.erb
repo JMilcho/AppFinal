@@ -1,19 +1,21 @@
-<%# navigation styled for Bootstrap 4.0 %>
-<div class="container">
-  <nav class="navbar navbar-dark bg-inverse">
-    <ul class="nav navbar-nav clearfix">
-      <li class="nav-item">
-        <button class="navbar-toggler hidden-sm-up nav-link" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
-          &#9776;
-        </button>
-      </li>
+<nav class="navbar navbar-inverse navbar-fixed-top railsapps-navbar" role="navigation">
+  <div class="container">
+            <div class="navbar-header">
+      <button class="navbar-toggle" aria-controls="bs-navbar" aria-expanded="true" data-target="#bs-navbar" data-toggle="collapse" type="button">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <%= link_to "Rails bootstrap", root_path, class: "navbar-brand" %>    
+  </div>
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
+    <ul class="nav navbar-nav">        
+      <%= render 'layouts/navigation_links' %>
     </ul>
-    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-      <%= link_to "Rails bootstrap", root_path, class: 'navbar-brand' %>
-      <ul class="nav navbar-nav">
-        <%= render 'layouts/navigation_links' %>
-        <%= render 'layouts/nav_links_for_auth' %>
-      </ul>
+    <ul class="nav navbar-nav navbar-right">        
+      <%= render 'layouts/nav_links_for_auth' %>
+    </ul>
     </div>
-  </nav>
 </div>
+  </nav>
