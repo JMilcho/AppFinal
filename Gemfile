@@ -46,3 +46,19 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'bootstrap', '~> 4.0.0.alpha3.1'
+gem 'devise'
+gem 'devise-i18n'
+gem 'high_voltage'
+gem 'therubyracer', :platform=>:ruby
+
+group :development do
+  gem 'rails_apps_pages'
+  gem 'rails_layout'
+end
+
+group :development, :test do
+  gem 'rubocop'
+end
+
